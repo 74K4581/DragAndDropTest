@@ -1,0 +1,29 @@
+<!-- ドラッグ可能リスト1 -->
+<div class="component">
+    <h2>app component</h2>
+    <div cdkDropListGroup>
+
+        <div #list1="cdkDropList" cdkDropList [cdkDropListData]="items1" (cdkDropListDropped)="drop($event)">
+            <div class="list">
+                <ng-container *ngFor="let item of items1">
+                    <div cdkDrag class="item">
+                        <app-item [item]=item></app-item>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <div #list2="cdkDropList" cdkDropList [cdkDropListData]="items2" (cdkDropListDropped)="drop($event)">
+            <div class="list">
+                <ng-container *ngFor="let item of items2">
+                    <div cdkDrag class="item">
+                        <app-item [item]=item></app-item>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <app-item-list></app-item-list>
+        <app-item-list2></app-item-list2>
+    </div>
+</div>

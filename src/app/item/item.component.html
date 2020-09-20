@@ -1,0 +1,7 @@
+
+<div class="item">
+    <div>{{item.name}}</div>
+    <input type="text" [(ngModel)]="item.value">
+    <button (click)="clearValue()">Clear</button>
+    <ng-content></ng-content>
+</div>
